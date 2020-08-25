@@ -11,12 +11,15 @@ VALUES('P00001', '테스트 상품');
 COMMIT;
 
 INSERT INTO tbl_product (p_code, p_name)
-VALUES('P001', '테스트 상품');
+VALUES ('P001', '테스트 상품');
 
 SELECT * FROM tbl_product WHERE p_code = RPAD('P001', 6,'');
 
 SELECT RPAD('가',10,'P') FROM DUAL;
 
+DELETE FROM tbl_product;
+
+SELECT * FROM tbl_product;
 /*
 table에서 1개의 칼럼을 PK를 설정할 수 없을 경우
 2개 이상의 칼럼을 묶어서 PK로 설정을 한다.
